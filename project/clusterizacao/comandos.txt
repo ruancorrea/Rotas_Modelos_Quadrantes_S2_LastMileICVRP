@@ -1,0 +1,18 @@
+# sem parametros
+poetry run python -m project.clusterizacao.clustering \
+    --train_instances data/cvrp-instances-1.0/train/pa-0 \
+    --output project/clusterizacao/pools/pa-0
+
+
+# com parametros
+poetry run python -m project.clusterizacao.clustering \
+    --train_instances data/cvrp-instances-1.0/train/pa-0 \
+    --output project/clusterizacao/pools/pa-0 \
+    --params project/clusterizacao/params.json 
+
+
+
+# filtragem
+poetry run python -m project.modelRouteFilter \
+    --pools project/clusterizacao/pools/pa-0/clusters1_3_300 \
+    --output project/clusterizacao/pools/pa-0
