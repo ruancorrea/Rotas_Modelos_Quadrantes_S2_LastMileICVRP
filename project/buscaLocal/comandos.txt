@@ -1,0 +1,7 @@
+# com parametros
+poetry run python -m project.buscaLocal.aloc \
+    --eval_instances data/cvrp-instances-1.0/dev/pa-0 \
+    --train_instances data/cvrp-instances-1.0/train/pa-0 \
+    --pools project/clusterizacao/pools/pa-0/clusters1Filter12_4_300 \
+    --output project/solutions \
+    --params project/buscaLocal/params.json 
