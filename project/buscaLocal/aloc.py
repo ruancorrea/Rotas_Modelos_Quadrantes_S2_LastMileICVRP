@@ -513,12 +513,12 @@ if __name__ == "__main__":
 
     inicio = time.time()
     # caso haja problema no tqdm
-    for eval in eval_files:
-        solve(eval)
+    #for eval in eval_files:
+    #    solve(eval)
 
     # Run solver on multiprocessing pool.
-    #with Pool(os.cpu_count()) as pool:
-    #    list(tqdm(pool.imap(solve, eval_files), total=len(eval_files)))
+    with Pool(os.cpu_count()) as pool:
+        list(tqdm(pool.imap(solve, eval_files), total=len(eval_files)))
 
     final = time.time()
     tmp = final - inicio
