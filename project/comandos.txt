@@ -1,0 +1,4 @@
+# filtragem
+poetry run python -m project.modelRouteFilter \
+    --pools project/clusterizacao/pools/pa-0/clusters1_3_300 \
+    --output project/clusterizacao/pools/pa-0
